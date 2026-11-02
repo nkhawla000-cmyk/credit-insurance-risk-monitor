@@ -8,10 +8,11 @@
 
 ### Try the interactive demo
 
-**Live GitHub Pages demo:** link to be added **after** publishing the repository and verifying the Pages deployment. Until then, open `dashboard/index.html` locally.
+### Try the interactive demo
+
+🚀 [Explore the Live Interactive Dashboard](https://nkhawla000-cmyk.github.io/credit-insurance-risk-monitor/) Explore three interactive modules to monitor credit insurance exposures, identify explainable warning signals, and simulate stress scenarios using synthetic data.
 
 The dashboard operates **offline**, with all scenario data prepared in Python. It has three sections:
-
 | Portfolio overview | Explainable alerts | Stress scenario laboratory |
 |---|---|---|
 | ![Overview](assets/overview.png) | ![Alerts](assets/early_warning.png) | ![Stress lab](assets/stress_scenarios.png) |
