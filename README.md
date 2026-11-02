@@ -6,7 +6,6 @@
 
 > **100% synthetic Moroccan-style B2B data.** Academic portfolio project: no real client records, no validated credit scoring, no automated underwriting or insurance decision.
 
-### Try the interactive demo
 
 ### Try the interactive demo
 
