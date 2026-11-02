@@ -1,0 +1,5 @@
+﻿source_file,csv_row,reason
+invoices.csv,842,duplicate ID in source CSV
+invoices.csv,843,unknown limit_id
+payments.csv,1122,payment_date precedes invoice issue_date
+payments.csv,1123,cumulative payments exceed invoice amount

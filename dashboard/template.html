@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Credit Insurance Risk Monitor · Executive Overview</title>
+  <style>
+    :root {--base:#0a1020;--aside:#0d1629;--panel:#111c31;--panel2:#16243a;--line:#283953;--muted:#9badc5;--txt:#f2f6ff;--teal:#54e1c1;--blue:#6b9fff;--amber:#ffca72;--red:#ff8299;--violet:#afa1ff}
+    * {box-sizing:border-box}body{margin:0;background:var(--base);font:14px/1.46 -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif;color:var(--txt)}
+    .app{display:grid;grid-template-columns:238px minmax(0,1fr);min-height:100vh}.aside{background:var(--aside);border-right:1px solid var(--line);padding:29px 19px;display:flex;flex-direction:column;gap:30px}
+    .brand{display:flex;align-items:center;gap:10px}.brandmark{display:grid;place-items:center;background:linear-gradient(135deg,#4dd8be,#4c8afb);color:#0a1220;width:38px;height:38px;border-radius:12px;font-size:16px;font-weight:900}
+    .brandtxt{font-weight:800;letter-spacing:-.02em;line-height:1.17}.brandtxt span{display:block;font-size:10px;letter-spacing:.12em;color:var(--muted);margin-top:4px}
+    .navtag,.subtle-label{text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:750;color:#7e94b4}.nav{display:flex;flex-direction:column;gap:9px}.navtag{margin:0 0 9px 11px}.navitem{display:flex;gap:11px;align-items:center;padding:12px 12px;border-radius:11px;color:#a9bcd5}.navitem.on{color:#dffcf6;background:#1c3447;border:1px solid #285d5c;font-weight:750}.navitem svg{flex:none}
+    .aside-foot{margin-top:auto;border:1px solid var(--line);background:#122038;padding:14px;border-radius:12px;color:var(--muted);font-size:12px}.status{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-right:6px}.aside-foot strong{color:#e3f8f1}
+    main{padding:30px 36px 40px;max-width:1680px;width:100%;margin:0 auto}.topbar{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.eyebrow{color:var(--teal);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800}.title{font-size:29px;letter-spacing:-.035em;font-weight:800;margin:8px 0 6px}.subtitle{color:var(--muted);margin:0;font-size:13px}.topright{display:flex;align-items:center;gap:12px;white-space:nowrap}.synthetic{font-size:10px;color:#ffe1aa;padding:7px 10px;border-radius:30px;border:1px solid #86633b;background:#2c231d;letter-spacing:.08em;font-weight:800}.snapshot{border:1px solid var(--line);border-radius:10px;padding:8px 11px;background:var(--panel);font-size:12px}
+    .filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:11px;align-items:end;background:var(--panel);padding:17px;border:1px solid var(--line);border-radius:14px;margin:25px 0 20px}.field{min-width:0}.field label{display:block;font-size:11px;color:var(--muted);margin:0 0 7px;font-weight:700}.field select{width:100%;appearance:none;background:var(--panel2);color:var(--txt);padding:10px 28px 10px 11px;border-radius:8px;border:1px solid #31435e;outline:none;font:inherit;font-size:12px}.field select:focus{border-color:var(--teal)}
+    button{border:1px solid #526880;background:#243650;color:#edf6ff;cursor:pointer;border-radius:9px;padding:10px 14px;font-weight:700;font-size:12px;white-space:nowrap}button:hover{background:#334a65}button:focus-visible{outline:2px solid var(--teal)}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.kpi,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px}.kpi{padding:20px;position:relative;overflow:hidden}.kpi:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent,var(--teal))}.kpi .label{font-size:12px;color:var(--muted);font-weight:650}.kpi .val{font-size:30px;line-height:1.2;font-weight:850;letter-spacing:-.04em;margin:16px 0 7px;font-variant-numeric:tabular-nums}.kpi .hint{font-size:11px;color:#91a5c0}.kpi .val small{font-size:15px;font-weight:700;letter-spacing:0}
+    .row2{display:grid;grid-template-columns:1.08fr 1fr;gap:16px;margin-top:16px}.panel{padding:20px}.panel-title{font-size:15px;font-weight:800;margin:0;letter-spacing:-.015em}.panel-sub{margin-top:5px;color:var(--muted);font-size:12px}.chart-area{margin-top:23px}.age-row{display:grid;grid-template-columns:96px 1fr 86px;gap:10px;align-items:center;margin-bottom:14px;font-size:12px}.age-label{color:#ccdaee}.age-value{text-align:right;font-variant-numeric:tabular-nums;font-weight:750}.bar-bg{height:11px;border-radius:999px;background:#26364f;overflow:hidden}.bar{height:100%;border-radius:999px;background:var(--bar,var(--teal));min-width:1px;transition:width .22s ease}.sector-row{display:grid;grid-template-columns:114px 1fr 92px;align-items:center;gap:10px;margin-bottom:13px;font-size:12px}.sector-val{text-align:right;font-weight:750}.footnote{font-size:11px;color:var(--muted);margin-top:17px;border-top:1px solid var(--line);padding-top:12px}
+    .row3{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-top:16px}.tablewrap{overflow:auto;margin-top:17px}table{border-collapse:collapse;width:100%;font-size:12px}th{color:#95aaca;text-transform:uppercase;letter-spacing:.055em;font-size:10px;font-weight:850;text-align:left;padding:11px 8px;border-bottom:1px solid #30425c}td{padding:12px 8px;border-bottom:1px solid #24344b}th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}.risk{font-size:10px;border-radius:999px;padding:4px 8px;font-weight:800;white-space:nowrap}.risk.high{background:#482b37;color:#ffb4bd}.risk.medium{background:#42382c;color:#f9d59f}.risk.low{background:#173e3e;color:#9be3cb}.note-list{margin:16px 0 0;padding:0;list-style:none}.note-list li{display:flex;justify-content:space-between;border-bottom:1px solid #24344b;padding:11px 0;gap:18px}.note-list li span{color:var(--muted)}.note-list strong{font-variant-numeric:tabular-nums}.data-note{margin-top:16px;color:#b8cbe2;background:#13253a;border:1px solid #2a455f;padding:14px;border-radius:10px;font-size:12px}
+    .footer{display:flex;justify-content:space-between;gap:8px;color:#7389a7;font-size:11px;margin-top:22px}.empty{color:var(--muted);padding:24px;text-align:center}.captionline{margin:17px 0 0;color:#8da5c0;font-size:12px}
+    @media(max-width:1150px){.app{grid-template-columns:76px 1fr}.aside{padding:24px 12px}.brandtxt,.navtag,.navitem span,.aside-foot{display:none}.navitem{justify-content:center}.brand{justify-content:center}main{padding:23px}.row2,.row3{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.app{display:block}.aside{padding:12px;flex-direction:row;border-bottom:1px solid var(--line)}.nav{flex-direction:row}.navitem{padding:8px}.topbar,.footer{flex-direction:column}.topright{flex-wrap:wrap}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters button{grid-column:1/-1}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{padding:14px}.kpi .val{font-size:22px}.age-row{grid-template-columns:75px 1fr 70px}.sector-row{grid-template-columns:83px 1fr 70px}.title{font-size:24px}}
+
+    [hidden]{display:none!important}a.navitem{text-decoration:none}a.navitem:hover{background:#172d42;color:#eaf8ff}a.navitem:focus-visible{outline:2px solid var(--teal)}
+    .muted-id{color:var(--muted);font-size:10px;margin-top:4px}.warning-intro{margin:22px 0 5px;color:#afc1da;font-size:13px;max-width:900px}.warning-intro p{margin:9px 0 0}
+    .field input{width:100%;background:var(--panel2);color:var(--txt);padding:10px 11px;border-radius:8px;border:1px solid #31435e;font:inherit;font-size:12px;outline:none}.field input:focus{border-color:var(--teal)}
+    .warning-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.warning-row{grid-template-columns:1fr 1fr}
+    .rule-list{list-style:none;padding:0;margin:16px 0 8px;color:#c4d3e7}.rule-list li{padding:9px 0;border-bottom:1px solid #24344b}.rule-list b{color:var(--teal);display:inline-block;width:35px}
+    .warning-table-panel{margin-top:16px}.warning-table-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.alert-table th,.alert-table td{vertical-align:middle}.alert-table td{white-space:nowrap}.alert-table td.reasons{white-space:normal;min-width:240px;max-width:390px}
+    .priority{display:inline-block;padding:5px 9px;border-radius:999px;font-weight:850;font-size:11px}.priority.critical{background:#552a3b;color:#ffb5c5}.priority.high{background:#403626;color:#ffd89d}.priority.watch{background:#302e4e;color:#c7bdff}
+    .reason{display:inline-block;background:#20334a;border:1px solid #35516c;border-radius:6px;font-size:10px;padding:3px 6px;color:#cfdbec;margin:2px}.warning-detail{margin-top:15px;background:#152942;border:1px solid #376582;border-radius:11px;padding:17px}.warning-detail ul{margin:10px 0;padding-left:21px}.warning-detail li{margin:7px 0}.warning-detail h3{margin:0 0 9px;font-size:15px}.detail-action{color:#b7d9e8;margin-top:10px}
+    @media(max-width:1150px){.warning-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.warning-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+    /* Stage 4: deterministic what-if laboratory */
+    .stress-intro{margin:23px 0 18px;color:#b3c4dc;font-size:13px;line-height:1.6;max-width:1060px}
+    .stress-controls{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;background:var(--panel);padding:18px;border:1px solid var(--line);border-radius:14px;margin:0 0 19px}
+    .stress-controls label{font-size:12px;color:var(--muted);display:block;margin-bottom:8px;font-weight:750}
+    .stress-controls select{width:100%;background:#182b44;border:1px solid #39506c;border-radius:8px;color:var(--txt);padding:12px 10px;font-size:13px}
+    .stress-compare{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .stress-card{border-radius:14px;background:var(--panel);border:1px solid var(--line);padding:19px;position:relative;overflow:hidden}
+    .stress-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent,var(--teal))}
+    .stress-label{font-size:11px;color:var(--muted);font-weight:700}.stress-value{font-size:27px;font-weight:850;letter-spacing:-.04em;margin-top:16px}
+    .stress-base{font-size:12px;color:#94a8c6;margin-top:4px}.stress-delta{display:inline-block;margin-top:9px;color:#ffb4bd;font-size:12px;font-weight:750}.stress-delta.neutral{color:#9cddc9}
+    .stress-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+    .compare-line{margin-top:22px}.compare-head{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#c4d4ec;margin-bottom:8px}
+    .compare-bars{display:grid;gap:5px}.compare-bg{height:10px;background:#263952;border-radius:20px;overflow:hidden}.compare-fill{height:100%;border-radius:20px;background:var(--blue);transition:width .2s}.compare-fill.shocked{background:var(--red)}
+    .compare-legend{display:flex;gap:18px;align-items:center;margin-top:18px;color:var(--muted);font-size:11px}.compare-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;background:var(--blue)}.compare-legend i.shock{background:var(--red)}
+    .stress-table{margin-top:16px}.stress-table .tablewrap{margin-top:16px}.stress-table td{font-variant-numeric:tabular-nums}.stress-table .positive{color:#ffb4bd;font-weight:750}
+    .stress-method{margin:17px 0 0;background:#142940;border:1px solid #33516c;padding:15px;border-radius:10px;font-size:12px;color:#bad0e8;line-height:1.7}
+    @media(max-width:1180px){.stress-compare{grid-template-columns:repeat(2,minmax(0,1fr))}.stress-controls{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){.stress-two{grid-template-columns:1fr}.stress-controls{grid-template-columns:1fr}.stress-compare{grid-template-columns:1fr 1fr}.stress-value{font-size:22px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="aside">
+    <div class="brand"><div class="brandmark">CI</div><div class="brandtxt">CREDIT INSURANCE<span>RISK MONITOR</span></div></div>
+    <nav class="nav" aria-label="Navigation"><div class="navtag">Workspace</div><a class="navitem on" id="navOverview" href="#overview" title="Executive Overview"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg><span>Executive Overview</span></a><a class="navitem" id="navWarnings" href="#warnings" title="Early Warning Center"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3zM12 9v5m0 3v1"/></svg><span>Early Warning Center</span></a><a class="navitem" id="navStress" href="#stress" title="Stress Scenarios"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19h16M4 5v14m3-5 4-4 3 2 6-7"/></svg><span>Stress Scenarios</span></a></nav>
+    <div class="aside-foot"><span class="status"></span><strong>Offline &amp; ready</strong><p>Données fictives, génération locale, aucune connexion Internet requise.</p>Étape 4 · Stress Scenario Lab</div>
+  </aside>
+  <main>
+    <header class="topbar"><div><div class="eyebrow">Trade Credit Insurance / Portfolio Intelligence</div><h1 class="title" id="pageTitle">Executive Risk Overview</h1><p class="subtitle" id="pageSubtitle">Surveillance des créances, de l'utilisation des limites et de la concentration des expositions.</p></div><div class="topright"><span class="synthetic">SIMULATED DATA</span><div class="snapshot">Arrêté au <strong id="asof"></strong></div></div></header>
+    <div id="viewOverview"><section class="filters" aria-label="Filtres du portefeuille"><div class="field"><label for="sector">Secteur assuré</label><select id="sector"></select></div><div class="field"><label for="region">Région acheteur</label><select id="region"></select></div><div class="field"><label for="risk">Profil de risque</label><select id="risk"></select></div><div class="field"><label for="status">Statut de la limite</label><select id="status"></select></div><button id="reset" type="button">Réinitialiser les filtres</button></section>
+    <section class="kpis" aria-label="Indicateurs clés">
+      <article class="kpi" style="--accent:var(--blue)"><div class="label">Encours total</div><div class="val" id="kOutstanding">—</div><div class="hint" id="kLimits">— limites sélectionnées</div></article>
+      <article class="kpi" style="--accent:var(--red)"><div class="label">Encours en retard</div><div class="val" id="kOverdue">—</div><div class="hint" id="kLateShare">— % de l'encours</div></article>
+      <article class="kpi" style="--accent:var(--amber)"><div class="label">Dépassement des limites</div><div class="val" id="kExcess">—</div><div class="hint">Σ max(encours − limite, 0)</div></article>
+      <article class="kpi" style="--accent:var(--teal)"><div class="label">Utilisation globale</div><div class="val" id="kUse">—</div><div class="hint">Encours / limites approuvées</div></article>
+    </section>
+    <section class="row2"><article class="panel"><h2 class="panel-title">Ancienneté des créances</h2><div class="panel-sub">Répartition de l'encours restant dû à la date d'arrêté</div><div id="aging" class="chart-area" role="img" aria-label="Ventilation des créances par ancienneté"></div><div class="footnote">Les tranches sont mutuellement exclusives. La tranche « 90+ jours » correspond aux factures les plus anciennes.</div></article><article class="panel"><h2 class="panel-title">Exposition par secteur</h2><div class="panel-sub">Encours agrégé par secteur de l'entreprise assurée</div><div id="sectors" class="chart-area" role="img" aria-label="Encours par secteur"></div><div class="footnote">Utilisez les filtres pour comparer les segments du portefeuille.</div></article></section>
+    <section class="row3"><article class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div><h2 class="panel-title">Acheteurs les plus exposés</h2><div class="panel-sub">Classement selon le montant restant dû, toutes limites sélectionnées confondues</div></div><button id="export" type="button">Exporter les 10 premiers (CSV)</button></div><div class="tablewrap"><table><thead><tr><th>Acheteur</th><th>Risque</th><th class="num">Encours</th><th class="num">Dont en retard</th><th class="num">Utilisation</th></tr></thead><tbody id="buyers"></tbody></table></div><p class="captionline" id="concentration"></p></article><article class="panel"><h2 class="panel-title">Qualité &amp; périmètre</h2><div class="panel-sub">Périmètre de calcul et contrôles de la donnée</div><ul class="note-list"><li><span>Factures sélectionnées</span><strong id="qInv">—</strong></li><li><span>Limites sélectionnées</span><strong id="qLimits">—</strong></li><li><span>Acheteurs distincts</span><strong id="qBuyers">—</strong></li><li><span>Retards supérieurs à 30 j</span><strong id="q30">—</strong></li><li><span>Lignes rejetées à l'import *</span><strong id="qRejected">—</strong></li></ul><div class="data-note">* Le nombre de rejets porte sur la totalité du jeu de données, indépendamment des filtres. Toutes les données sont synthétiques. Les profils de risque sont simulés et ne constituent pas des scores de crédit validés.</div></article></section>
+</div>
+    <div id="viewWarnings" hidden>
+      <div class="warning-intro"><div class="eyebrow">Actionable monitoring / Explainable rules</div><p>Les alertes ci-dessous sont calculées à partir d'un cliché daté. Chaque priorité est justifiée par des règles publiées, pas par un modèle prédictif. Les profils de risque sont fictifs.</p></div>
+      <section class="filters warning-filters" aria-label="Filtres des alertes">
+        <div class="field"><label for="wSector">Secteur</label><select id="wSector"></select></div>
+        <div class="field"><label for="wPriority">Priorité</label><select id="wPriority"><option value="">Toutes les priorités</option><option value="critical">Critique</option><option value="high">Haute</option><option value="watch">Surveillance</option></select></div>
+        <div class="field"><label for="wStatus">Statut de la limite</label><select id="wStatus"><option value="">Tous les statuts</option></select></div>
+        <div class="field"><label for="wSearch">Acheteur ou limite</label><input type="search" id="wSearch" placeholder="Ex. B025 ou L0065" autocomplete="off"></div>
+        <button id="wReset" type="button">Réinitialiser</button>
+      </section>
+      <section class="warning-stats" aria-label="Indicateurs des alertes">
+        <article class="kpi" style="--accent:var(--red)"><div class="label">Alertes critiques</div><div class="val" id="wCritical">—</div><div class="hint">Indice de priorité ≥ 7</div></article>
+        <article class="kpi" style="--accent:var(--amber)"><div class="label">Priorité haute</div><div class="val" id="wHigh">—</div><div class="hint">Indice compris entre 4 et 6</div></article>
+        <article class="kpi" style="--accent:var(--violet)"><div class="label">Sous surveillance</div><div class="val" id="wWatch">—</div><div class="hint">Indice compris entre 2 et 3</div></article>
+        <article class="kpi" style="--accent:var(--teal)"><div class="label">Encours concerné</div><div class="val" id="wExposure">—</div><div class="hint" id="wBuyers">— acheteurs distincts</div></article>
+      </section>
+      <section class="row2 warning-row">
+        <article class="panel"><h2 class="panel-title">Pourquoi une alerte ?</h2><div class="panel-sub">Nombre de limites concernées par chaque signal, sur la sélection courante</div><div id="warningSignals" class="chart-area"></div></article>
+        <article class="panel"><h2 class="panel-title">Méthodologie &amp; décision</h2><div class="panel-sub">Règles métier transparentes, pédagogiques et configurables dans le code</div>
+          <ul class="rule-list"><li><b>+4</b> Limite de crédit dépassée</li><li><b>+3</b> Encours échu > 90 j : au moins 25 000 MAD et 25 % de l'encours</li><li><b>+2</b> Encours échu > 30 j : au moins 50 000 MAD et 40 % de l'encours</li><li><b>+2</b> Limite suspendue avec encours non nul</li><li><b>+1</b> Profil de risque simulé élevé, uniquement avec un autre signal</li></ul>
+          <div class="data-note"><strong>Important :</strong> l'indice de suivi n'est ni une probabilité de défaut, ni un score de crédit validé, ni une décision de garantie. Une alerte invite à vérifier le dossier.</div>
+        </article>
+      </section>
+      <section class="panel warning-table-panel"><div class="warning-table-head"><div><h2 class="panel-title">Dossiers à examiner en priorité</h2><div class="panel-sub">Une ligne = une limite accordée à un acheteur par une entreprise assurée</div></div><button id="wExport" type="button">Exporter les alertes (CSV)</button></div>
+        <div class="tablewrap"><table class="alert-table"><thead><tr><th>Priorité</th><th>Acheteur</th><th>Assuré</th><th class="num">Indice</th><th class="num">Encours</th><th class="num">Dépassement</th><th>Signaux</th><th>Analyse</th></tr></thead><tbody id="wRows"></tbody></table></div>
+        <p id="wCount" class="captionline"></p>
+        <div id="wDetail" class="warning-detail" hidden aria-live="polite"></div>
+      </section>
+    </div>
+
+    <div id="viewStress" hidden>
+      <div class="stress-intro"><div class="eyebrow">What-if Analysis / Transparent counterfactuals</div>
+        <p><strong>Et si les retards augmentaient ou les limites diminuaient ?</strong> Comparez le portefeuille actuel à un choc hypothétique, sans modifier les données sources. Les 30 simulations sont calculées par Python puis restituées hors ligne.</p>
+      </div>
+      <section class="stress-controls" aria-label="Paramètres du scénario">
+        <div><label for="sSector">Secteur analysé</label><select id="sSector"></select></div>
+        <div><label for="sDelay">Décalage des échéances impayées</label><select id="sDelay"><option value="0">Aucun choc · 0 jour</option><option value="15">+15 jours de retard</option><option value="30">+30 jours de retard</option><option value="45">+45 jours de retard</option><option value="60">+60 jours de retard</option></select></div>
+        <div><label for="sLimit">Réduction hypothétique des limites</label><select id="sLimit"><option value="0">Aucune · 0 %</option><option value="10">−10 %</option><option value="20">−20 %</option><option value="30">−30 %</option><option value="40">−40 %</option><option value="50">−50 %</option></select></div>
+        <button type="button" id="sReset">Réinitialiser</button>
+      </section>
+      <section class="stress-compare" aria-label="Impact agrégé du scénario">
+        <article class="stress-card" style="--accent:var(--blue)"><div class="stress-label">Retards supérieurs à 30 j</div><div class="stress-value" id="sLate">—</div><div class="stress-base" id="sLateBase">Base : —</div><span class="stress-delta" id="sLateDelta">—</span></article>
+        <article class="stress-card" style="--accent:var(--red)"><div class="stress-label">Dépassements des limites</div><div class="stress-value" id="sExcess">—</div><div class="stress-base" id="sExcessBase">Base : —</div><span class="stress-delta" id="sExcessDelta">—</span></article>
+        <article class="stress-card" style="--accent:var(--amber)"><div class="stress-label">Alertes critiques</div><div class="stress-value" id="sCritical">—</div><div class="stress-base" id="sCriticalBase">Base : —</div><span class="stress-delta" id="sCriticalDelta">—</span></article>
+        <article class="stress-card" style="--accent:var(--teal)"><div class="stress-label">Utilisation globale des limites</div><div class="stress-value" id="sUse">—</div><div class="stress-base" id="sUseBase">Base : —</div><span class="stress-delta" id="sUseDelta">—</span></article>
+      </section>
+      <section class="stress-two">
+        <article class="panel"><h2 class="panel-title">Avant / après le choc</h2><p class="panel-sub">Comparaison des montants, à périmètre constant</p><div id="stressComparison"></div><div class="compare-legend"><span><i></i> Situation initiale</span><span><i class="shock"></i> Scénario hypothétique</span></div></article>
+        <article class="panel"><h2 class="panel-title">Interprétation et limites</h2><p class="panel-sub">Des hypothèses transparentes, pas une prévision financière</p>
+          <ul class="rule-list"><li><b>01</b> Encours et paiements restent inchangés.</li><li><b>02</b> Décalage des échéances = plus grande ancienneté des impayés.</li><li><b>03</b> Réduction uniforme des limites = hausse possible des dépassements.</li><li><b>04</b> Les alertes sont recalculées avec les règles de l'étape 3.</li></ul>
+          <div class="stress-method"><strong>Important :</strong> simulation statique construite sur des données fictives. Ce n'est ni un modèle de PD, ni une estimation de sinistres, ni une recommandation de réduction réelle des garanties. L'hypothèse de décalage des échéances est un choc pédagogique, pas une modification contractuelle.</div>
+        </article>
+      </section>
+      <section class="panel stress-table"><div class="warning-table-head"><div><h2 class="panel-title">Dossiers les plus affectés</h2><p class="panel-sub">Écart de dépassement et de retard > 30 j, au niveau des limites</p></div><button id="sExport" type="button">Exporter le scénario (CSV)</button></div>
+        <div class="tablewrap"><table><thead><tr><th>Limite / acheteur</th><th>Secteur</th><th class="num">Δ retard >30 j</th><th class="num">Δ dépassement</th><th class="num">Indice après choc</th><th>Priorité après choc</th></tr></thead><tbody id="sRows"></tbody></table></div>
+        <p class="captionline" id="sCount"></p>
+      </section>
+    </div>
+        <footer class="footer"><span>Credit Insurance Risk Monitor · Étape 4 · Projet pédagogique</span><span>Python / SQLite → CSV snapshots → Dashboard HTML autonome</span></footer>
+  </main>
+</div>
+<script>
+/*__PORTFOLIO_DATA__*/
+const $=id=>document.getElementById(id);
+const fmt=new Intl.NumberFormat('fr-FR',{maximumFractionDigits:2});
+const m=n=>`${fmt.format((n||0)/1e6)} M`;
+const pc=n=>`${fmt.format(n||0)} %`;
+const htmlEscape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const labelRisk=s=>({high:'Élevé',medium:'Modéré',low:'Faible'}[s]||s);
+const agingOrder=['not_due','1-30','31-60','61-90','90+'];
+const agingLabels={'not_due':'Non échu','1-30':'1–30 j','31-60':'31–60 j','61-90':'61–90 j','90+':'> 90 j'};
+const agingColors=['var(--teal)','var(--blue)','var(--violet)','var(--amber)','var(--red)'];
+let currentTop=[];
+function unique(field){return [...new Set(DATA.limits.map(r=>r[field]))].sort((a,b)=>a.localeCompare(b,'fr'));}
+function buildFilters(){for(let [id,field,all] of [['sector','sector','Tous les secteurs'],['region','region','Toutes les régions'],['risk','risk','Tous les profils'],['status','status','Tous les statuts']]){const sel=$(id);let el=document.createElement('option');el.value='';el.textContent=all;sel.appendChild(el);for(let value of unique(field)){el=document.createElement('option');el.value=value;el.textContent=field==='risk'?labelRisk(value):value;sel.appendChild(el);}sel.addEventListener('change',update);}}
+function makeBars(target,rows,colorFn){const max=Math.max(1,...rows.map(r=>r[1]));$(target).innerHTML=rows.length?rows.map(([name,num],i)=>`<div class="${target==='aging'?'age-row':'sector-row'}"><span class="${target==='aging'?'age-label':''}" title="${htmlEscape(name)}">${htmlEscape(name)}</span><div class="bar-bg"><div class="bar" style="width:${(num/max)*100}%;--bar:${colorFn(i)}"></div></div><span class="${target==='aging'?'age-value':'sector-val'}">${m(num)}</span></div>`).join(''):'<p class="empty">Aucune donnée pour cette sélection.</p>';}
+function renderBuyers(buyers){$('buyers').innerHTML=buyers.length?buyers.map(x=>`<tr><td><strong>${htmlEscape(x.buyer_id)}</strong></td><td><span class="risk ${htmlEscape(x.risk_band)}">${htmlEscape(labelRisk(x.risk_band))}</span></td><td class="num">${m(x.outstanding)}</td><td class="num">${m(x.overdue)}</td><td class="num">${pc(x.limit?100*x.outstanding/x.limit:0)}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">Aucun acheteur</td></tr>';}
+function update(){
+  const s={sector:$('sector').value,region:$('region').value,risk_band:$('risk').value,status:$('status').value};
+  const limits=DATA.limits.filter(l=>Object.entries(s).every(([k,v])=>!v||l[k]===v));
+  const limitSet=new Set(limits.map(x=>x.limit_id));
+  const invoices=DATA.invoices.filter(i=>limitSet.has(i.limit_id));
+  const sum=(arr,key)=>arr.reduce((acc,x)=>acc+x[key],0);
+  const outstanding=sum(limits,'outstanding_mad'),overdue=sum(limits,'overdue_mad'),approved=sum(limits,'credit_limit_mad'),excess=sum(limits,'over_limit_mad');
+  $('kOutstanding').textContent=m(outstanding);$('kLimits').textContent=`${fmt.format(limits.length)} limites sélectionnées`;
+  $('kOverdue').textContent=m(overdue);$('kLateShare').textContent=pc(outstanding?100*overdue/outstanding:0)+' de l’encours';
+  $('kExcess').textContent=m(excess);$('kUse').textContent=pc(approved?100*outstanding/approved:0);
+  const age=Object.fromEntries(agingOrder.map(x=>[x,0]));for(let inv of invoices){age[inv.aging_bucket]=(age[inv.aging_bucket]||0)+inv.outstanding_mad;}
+  makeBars('aging',agingOrder.map(a=>[agingLabels[a],age[a]]),i=>agingColors[i]);
+  const sectors={};for(let l of limits){sectors[l.sector]=(sectors[l.sector]||0)+l.outstanding_mad;}
+  makeBars('sectors',Object.entries(sectors).sort((a,b)=>b[1]-a[1]),()=> 'var(--blue)');
+  const buyerMap=new Map();for(let l of limits){let b=buyerMap.get(l.buyer_id);if(!b){b={buyer_id:l.buyer_id,risk_band:l.risk_band,outstanding:0,overdue:0,limit:0};buyerMap.set(l.buyer_id,b);}b.outstanding+=l.outstanding_mad;b.overdue+=l.overdue_mad;b.limit+=l.credit_limit_mad;}
+  currentTop=[...buyerMap.values()].sort((a,b)=>b.outstanding-a.outstanding).slice(0,10);renderBuyers(currentTop);
+  const topSum=currentTop.reduce((a,b)=>a+b.outstanding,0);
+  $('concentration').textContent=`Concentration des 10 premiers acheteurs : ${pc(outstanding?100*topSum/outstanding:0)} de l'encours filtré.`;
+  $('qInv').textContent=fmt.format(invoices.length);$('qLimits').textContent=fmt.format(limits.length);$('qBuyers').textContent=fmt.format(buyerMap.size);
+  $('q30').textContent=m(invoices.filter(x=>x.days_overdue>30).reduce((a,b)=>a+b.outstanding_mad,0));$('qRejected').textContent=fmt.format(DATA.meta.rejected_rows);
+}
+$('reset').addEventListener('click',()=>{for(let id of ['sector','region','risk','status'])$(id).value='';update();});
+$('export').addEventListener('click',()=>{let arr=[['buyer_id','risk_band','outstanding_mad','overdue_mad','approved_limit_mad'],...currentTop.map(b=>[b.buyer_id,b.risk_band,b.outstanding,b.overdue,b.limit])];let csv='\ufeff'+arr.map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\r\n');let a=document.createElement('a');let u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.href=u;a.download=`top10_buyers_${DATA.meta.as_of}.csv`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);});
+$('asof').textContent=DATA.meta.as_of.split('-').reverse().join('/');buildFilters();update();
+
+// Stage 3 — explainable monitoring engine. The Python build computes the flags.
+const priorityLabel={critical:'Critique',high:'Haute',watch:'Surveillance'};
+const signalLabel={over_limit:'Limite dépassée',aged_90:'Retards > 90 j',late_30:'Retards > 30 j',suspended:'Limite suspendue',risk_profile:'Profil simulé élevé'};
+let visibleAlerts=[];
+function showView(section){
+  const warnings=section==='warnings',stress=section==='stress';
+  $('viewOverview').hidden=warnings||stress;$('viewWarnings').hidden=!warnings;$('viewStress').hidden=!stress;
+  $('navOverview').classList.toggle('on',!warnings&&!stress);$('navWarnings').classList.toggle('on',warnings);$('navStress').classList.toggle('on',stress);
+  $('pageTitle').textContent=stress?'Stress Scenario Lab':warnings?'Early Warning Center':'Executive Risk Overview';
+  $('pageSubtitle').textContent=stress?'Simuler des chocs sur les échéances et les limites de crédit pour explorer leurs impacts.':warnings?"Détection explicable des signaux d'alerte et priorisation des dossiers à examiner.":"Surveillance des créances, de l'utilisation des limites et de la concentration des expositions.";
+  if(warnings) updateWarnings();
+  if(stress) updateStress();
+}
+function buildWarningFilters(){
+  const sector=$('wSector');sector.add(new Option('Tous les secteurs',''));
+  for(let v of unique('sector'))sector.add(new Option(v,v));
+  const status=$('wStatus');for(let v of unique('status'))status.add(new Option(v,v));
+  for(let id of ['wSector','wPriority','wStatus'])$(id).addEventListener('change',updateWarnings);
+  $('wSearch').addEventListener('input',updateWarnings);
+  $('wReset').addEventListener('click',()=>{for(let id of ['wSector','wPriority','wStatus','wSearch'])$(id).value='';updateWarnings();});
+  $('wExport').addEventListener('click',()=>{
+    const columns=['limit_id','buyer_id','policyholder_id','sector','region','priority','score','outstanding_mad','credit_limit_mad','over_limit_mad','overdue_30_plus_mad','overdue_90_plus_mad','reason_codes'];
+    const rows=[columns,...visibleAlerts.map(a=>columns.map(c=>c==='reason_codes'?a.reasons.map(r=>r.code).join('|'):a[c]))];
+    const csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+    const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download=`early_warning_${DATA.meta.as_of}.csv`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+  $('wRows').addEventListener('click',event=>{
+    const button=event.target.closest('button[data-limit]');if(!button)return;
+    const selected=visibleAlerts.find(a=>a.limit_id===button.dataset.limit);if(!selected)return;
+    const detail=$('wDetail');detail.hidden=false;
+    detail.innerHTML=`<h3>${htmlEscape(selected.limit_id)} · Acheteur ${htmlEscape(selected.buyer_id)} · Indice ${selected.score}</h3><p>Entreprise assurée : ${htmlEscape(selected.policyholder_id)} · Secteur : ${htmlEscape(selected.sector)} · Profil simulé : ${htmlEscape(labelRisk(selected.risk_band))}</p><ul>${selected.reasons.map(r=>`<li><strong>+${r.points} — ${htmlEscape(r.label)}</strong> : ${htmlEscape(r.detail)}</li>`).join('')}</ul><p class="detail-action">Action suggérée : examiner les factures et les paiements, confirmer le statut et la limite avec les systèmes métier, puis faire valider les mesures éventuelles par un gestionnaire habilité.</p>`;
+    detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+function updateWarnings(){
+  const search=$('wSearch').value.trim().toLowerCase();
+  visibleAlerts=DATA.alerts.filter(a=>(!$('wSector').value||a.sector===$('wSector').value)&&(!$('wPriority').value||a.priority===$('wPriority').value)&&(!$('wStatus').value||a.status===$('wStatus').value)&&(!search||a.buyer_id.toLowerCase().includes(search)||a.limit_id.toLowerCase().includes(search)));
+  $('wCritical').textContent=fmt.format(visibleAlerts.filter(x=>x.priority==='critical').length);
+  $('wHigh').textContent=fmt.format(visibleAlerts.filter(x=>x.priority==='high').length);
+  $('wWatch').textContent=fmt.format(visibleAlerts.filter(x=>x.priority==='watch').length);
+  const total=visibleAlerts.reduce((acc,a)=>acc+a.outstanding_mad,0);
+  $('wExposure').textContent=m(total);
+  $('wBuyers').textContent=fmt.format(new Set(visibleAlerts.map(a=>a.buyer_id)).size)+' acheteurs distincts';
+  const signalCounts={over_limit:0,aged_90:0,late_30:0,suspended:0,risk_profile:0};
+  for(const alert of visibleAlerts)for(const reason of alert.reasons)signalCounts[reason.code]++;
+  makeBars('warningSignals',Object.entries(signalCounts).map(([code,count])=>[signalLabel[code],count]),()=>'var(--teal)');
+  // Unlike monetary bars, these figures are counts of flagged limits.
+  const target=$('warningSignals');for(const span of target.querySelectorAll('.sector-val')){
+    const bar=span.closest('.sector-row');const label=bar.querySelector('span').textContent;
+    const code=Object.keys(signalLabel).find(k=>signalLabel[k]===label);
+    span.textContent=fmt.format(signalCounts[code]||0);
+  }
+  $('wRows').innerHTML=visibleAlerts.slice(0,12).map(a=>`<tr><td><span class="priority ${htmlEscape(a.priority)}">${htmlEscape(priorityLabel[a.priority])}</span></td><td><strong>${htmlEscape(a.buyer_id)}</strong><div class="muted-id">${htmlEscape(a.limit_id)}</div></td><td>${htmlEscape(a.policyholder_id)}</td><td class="num">${a.score}</td><td class="num">${m(a.outstanding_mad)}</td><td class="num">${m(a.over_limit_mad)}</td><td class="reasons">${a.reasons.map(r=>`<span class="reason">${htmlEscape(r.label)}</span>`).join('')}</td><td><button type="button" data-limit="${htmlEscape(a.limit_id)}">Détails</button></td></tr>`).join('')||'<tr><td colspan="8" class="empty">Aucune alerte pour ces critères.</td></tr>';
+  $('wCount').textContent=`${fmt.format(Math.min(12,visibleAlerts.length))} dossiers affichés sur ${fmt.format(visibleAlerts.length)} alertes · Export CSV : toutes les alertes filtrées.`;
+  $('wDetail').hidden=true;$('wDetail').innerHTML='';
+}
+buildWarningFilters();
+$('navOverview').addEventListener('click',()=>showView('overview'));
+$('navWarnings').addEventListener('click',()=>showView('warnings'));
+$('navStress').addEventListener('click',()=>showView('stress'));
+window.addEventListener('hashchange',()=>showView(location.hash==='#stress'?'stress':location.hash==='#warnings'?'warnings':'overview'));
+
+// Stage 4 — Python-precomputed scenario grid; no external calls or mutation.
+let currentStressRows=[];
+function stressInit(){
+  $('sSector').add(new Option('Tous les secteurs',''));
+  for(const v of unique('sector'))$('sSector').add(new Option(v,v));
+  for(const id of ['sSector','sDelay','sLimit'])$(id).addEventListener('change',updateStress);
+  $('sReset').addEventListener('click',()=>{for(const id of ['sSector','sDelay','sLimit'])$(id).value='0';$('sSector').value='';updateStress();});
+  $('sExport').addEventListener('click',()=>{
+    const cols=['limit_id','buyer_id','policyholder_id','sector','outstanding_mad','base_limit_mad','scenario_limit_mad','base_overdue_30_mad','scenario_overdue_30_mad','base_over_limit_mad','scenario_over_limit_mad','priority','score'];
+    const rows=[cols,...currentStressRows.map(r=>cols.map(k=>r[k]))];
+    const csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+    const u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+    const a=document.createElement('a');a.href=u;a.download=`stress_scenario_${$('sDelay').value}d_${$('sLimit').value}pct_${DATA.meta.as_of}.csv`;
+    document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);
+  });
+}
+function changeText(id,delta,unit){
+  const el=$(id);el.classList.toggle('neutral',delta===0);
+  let txt=unit==='count'?String(delta):unit==='percentage'?`${fmt.format(delta)} points`:m(delta);
+  el.textContent=`${delta>0?'+':''}${txt} vs base`;
+}
+function stressMoney(n){return n===0?'0 MAD':Math.abs(n)<1000000?`${fmt.format(n/1000)} k MAD`:m(n);}
+function comparisonBars(base,scenario,label){
+  const max=Math.max(1,base,scenario);
+  return `<div class="compare-line"><div class="compare-head"><strong>${htmlEscape(label)}</strong><span>${m(base)} → ${m(scenario)}</span></div><div class="compare-bars"><div class="compare-bg"><div class="compare-fill" style="width:${100*base/max}%"></div></div><div class="compare-bg"><div class="compare-fill shocked" style="width:${100*scenario/max}%"></div></div></div></div>`;
+}
+function updateStress(){
+  const key=`${$('sDelay').value}_${$('sLimit').value}`;
+  const scenario=DATA.stress[key];
+  if(!scenario)throw new Error('Missing precomputed scenario '+key);
+  const sector=$('sSector').value;
+  const rows=scenario.rows.filter(x=>!sector||x.sector===sector);
+  const baseline=DATA.stress['0_0'].rows.filter(x=>!sector||x.sector===sector);
+  const bAlerts=new Map(baseline.map(x=>[x.limit_id,x.priority]));
+  const sum=(arr,col)=>arr.reduce((v,r)=>v+r[col],0);
+  const outstanding=sum(rows,'outstanding_mad'),bApproved=sum(rows,'base_limit_mad'),sApproved=sum(rows,'scenario_limit_mad');
+  const bLate=sum(rows,'base_overdue_30_mad'),sLate=sum(rows,'scenario_overdue_30_mad');
+  const bExcess=sum(rows,'base_over_limit_mad'),sExcess=sum(rows,'scenario_over_limit_mad');
+  const bCrit=[...bAlerts.values()].filter(x=>x==='critical').length;
+  const sCrit=rows.filter(x=>x.priority==='critical').length;
+  const bUse=bApproved?100*outstanding/bApproved:0,sUse=sApproved?100*outstanding/sApproved:0;
+  $('sLate').textContent=m(sLate);$('sLateBase').textContent='Base : '+m(bLate);changeText('sLateDelta',sLate-bLate,'money');
+  $('sExcess').textContent=m(sExcess);$('sExcessBase').textContent='Base : '+m(bExcess);changeText('sExcessDelta',sExcess-bExcess,'money');
+  $('sCritical').textContent=fmt.format(sCrit);$('sCriticalBase').textContent='Base : '+fmt.format(bCrit);changeText('sCriticalDelta',sCrit-bCrit,'count');
+  $('sUse').textContent=pc(sUse);$('sUseBase').textContent='Base : '+pc(bUse);changeText('sUseDelta',Math.round((sUse-bUse)*100)/100,'percentage');
+  $('stressComparison').innerHTML=comparisonBars(bLate,sLate,'Retards > 30 jours')+comparisonBars(bExcess,sExcess,'Dépassements des limites');
+  currentStressRows=[...rows].sort((a,b)=>
+    (b.scenario_over_limit_mad-b.base_over_limit_mad+b.scenario_overdue_30_mad-b.base_overdue_30_mad)-
+    (a.scenario_over_limit_mad-a.base_over_limit_mad+a.scenario_overdue_30_mad-a.base_overdue_30_mad)||a.limit_id.localeCompare(b.limit_id));
+  const changed=currentStressRows.filter(r=>r.scenario_over_limit_mad>r.base_over_limit_mad||r.scenario_overdue_30_mad>r.base_overdue_30_mad);
+  $('sRows').innerHTML=changed.slice(0,10).map(r=>{
+    const priority={critical:'Critique',high:'Haute',watch:'Surveillance',none:'Aucune'}[r.priority]||r.priority;
+    return `<tr><td><strong>${htmlEscape(r.limit_id)}</strong><div class="muted-id">${htmlEscape(r.buyer_id)}</div></td><td>${htmlEscape(r.sector)}</td><td class="num positive">+${stressMoney(r.scenario_overdue_30_mad-r.base_overdue_30_mad)}</td><td class="num positive">+${stressMoney(r.scenario_over_limit_mad-r.base_over_limit_mad)}</td><td class="num">${r.score}</td><td>${r.priority==='none'?priority:`<span class="priority ${htmlEscape(r.priority)}">${priority}</span>`}</td></tr>`;
+  }).join('')||'<tr><td colspan="6" class="empty">Aucun impact avec ce paramétrage : essayez un choc plus fort.</td></tr>';
+  $('sCount').textContent=`${fmt.format(changed.length)} limites affectées sur ${fmt.format(rows.length)} · Export CSV : toutes les limites du secteur sélectionné. Encours total inchangé : ${m(outstanding)}.`;
+}
+stressInit();
+showView(location.hash==='#stress'?'stress':location.hash==='#warnings'?'warnings':'overview');
+
+</script>
+</body></html>

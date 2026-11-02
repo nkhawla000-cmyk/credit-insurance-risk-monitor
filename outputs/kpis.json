@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-10-31",
+  "currency": "MAD",
+  "policyholders": 8,
+  "buyers": 80,
+  "credit_limits": 140,
+  "invoices_issued": 840,
+  "outstanding_mad": 22867875,
+  "overdue_mad": 18263750,
+  "overdue_30_plus_mad": 15604500,
+  "approved_limits_mad": 47210000,
+  "over_limit_mad": 3426375,
+  "overdue_share_pct": 79.87,
+  "global_utilization_pct": 48.44,
+  "top_10_buyers_exposure_pct": 29.98,
+  "rejected_rows": 4
+}

@@ -1,0 +1,81 @@
+buyer_id,buyer_name,region,risk_band
+B001,Acheteur fictif 001,Marrakech-Safi,medium
+B002,Acheteur fictif 002,Marrakech-Safi,medium
+B003,Acheteur fictif 003,Souss-Massa,medium
+B004,Acheteur fictif 004,Fes-Meknes,medium
+B005,Acheteur fictif 005,Marrakech-Safi,low
+B006,Acheteur fictif 006,Casablanca-Settat,medium
+B007,Acheteur fictif 007,Casablanca-Settat,low
+B008,Acheteur fictif 008,Casablanca-Settat,low
+B009,Acheteur fictif 009,Souss-Massa,low
+B010,Acheteur fictif 010,Tanger-Tetouan-Al Hoceima,low
+B011,Acheteur fictif 011,Tanger-Tetouan-Al Hoceima,low
+B012,Acheteur fictif 012,Tanger-Tetouan-Al Hoceima,high
+B013,Acheteur fictif 013,Souss-Massa,medium
+B014,Acheteur fictif 014,Casablanca-Settat,medium
+B015,Acheteur fictif 015,Casablanca-Settat,medium
+B016,Acheteur fictif 016,Tanger-Tetouan-Al Hoceima,low
+B017,Acheteur fictif 017,Rabat-Sale-Kenitra,high
+B018,Acheteur fictif 018,Souss-Massa,medium
+B019,Acheteur fictif 019,Tanger-Tetouan-Al Hoceima,low
+B020,Acheteur fictif 020,Souss-Massa,low
+B021,Acheteur fictif 021,Fes-Meknes,low
+B022,Acheteur fictif 022,Fes-Meknes,high
+B023,Acheteur fictif 023,Marrakech-Safi,low
+B024,Acheteur fictif 024,Casablanca-Settat,low
+B025,Acheteur fictif 025,Marrakech-Safi,high
+B026,Acheteur fictif 026,Fes-Meknes,high
+B027,Acheteur fictif 027,Tanger-Tetouan-Al Hoceima,high
+B028,Acheteur fictif 028,Marrakech-Safi,high
+B029,Acheteur fictif 029,Fes-Meknes,medium
+B030,Acheteur fictif 030,Casablanca-Settat,medium
+B031,Acheteur fictif 031,Rabat-Sale-Kenitra,high
+B032,Acheteur fictif 032,Souss-Massa,medium
+B033,Acheteur fictif 033,Souss-Massa,low
+B034,Acheteur fictif 034,Marrakech-Safi,low
+B035,Acheteur fictif 035,Rabat-Sale-Kenitra,low
+B036,Acheteur fictif 036,Rabat-Sale-Kenitra,high
+B037,Acheteur fictif 037,Casablanca-Settat,medium
+B038,Acheteur fictif 038,Fes-Meknes,medium
+B039,Acheteur fictif 039,Souss-Massa,high
+B040,Acheteur fictif 040,Marrakech-Safi,low
+B041,Acheteur fictif 041,Fes-Meknes,medium
+B042,Acheteur fictif 042,Tanger-Tetouan-Al Hoceima,medium
+B043,Acheteur fictif 043,Souss-Massa,medium
+B044,Acheteur fictif 044,Fes-Meknes,high
+B045,Acheteur fictif 045,Fes-Meknes,low
+B046,Acheteur fictif 046,Tanger-Tetouan-Al Hoceima,high
+B047,Acheteur fictif 047,Casablanca-Settat,low
+B048,Acheteur fictif 048,Souss-Massa,high
+B049,Acheteur fictif 049,Fes-Meknes,high
+B050,Acheteur fictif 050,Fes-Meknes,low
+B051,Acheteur fictif 051,Rabat-Sale-Kenitra,low
+B052,Acheteur fictif 052,Fes-Meknes,low
+B053,Acheteur fictif 053,Fes-Meknes,high
+B054,Acheteur fictif 054,Marrakech-Safi,medium
+B055,Acheteur fictif 055,Casablanca-Settat,high
+B056,Acheteur fictif 056,Tanger-Tetouan-Al Hoceima,low
+B057,Acheteur fictif 057,Casablanca-Settat,low
+B058,Acheteur fictif 058,Souss-Massa,medium
+B059,Acheteur fictif 059,Marrakech-Safi,low
+B060,Acheteur fictif 060,Rabat-Sale-Kenitra,high
+B061,Acheteur fictif 061,Souss-Massa,low
+B062,Acheteur fictif 062,Casablanca-Settat,medium
+B063,Acheteur fictif 063,Fes-Meknes,low
+B064,Acheteur fictif 064,Rabat-Sale-Kenitra,medium
+B065,Acheteur fictif 065,Fes-Meknes,low
+B066,Acheteur fictif 066,Casablanca-Settat,low
+B067,Acheteur fictif 067,Fes-Meknes,medium
+B068,Acheteur fictif 068,Casablanca-Settat,medium
+B069,Acheteur fictif 069,Rabat-Sale-Kenitra,low
+B070,Acheteur fictif 070,Marrakech-Safi,low
+B071,Acheteur fictif 071,Marrakech-Safi,high
+B072,Acheteur fictif 072,Souss-Massa,medium
+B073,Acheteur fictif 073,Tanger-Tetouan-Al Hoceima,low
+B074,Acheteur fictif 074,Tanger-Tetouan-Al Hoceima,medium
+B075,Acheteur fictif 075,Marrakech-Safi,medium
+B076,Acheteur fictif 076,Fes-Meknes,medium
+B077,Acheteur fictif 077,Rabat-Sale-Kenitra,medium
+B078,Acheteur fictif 078,Fes-Meknes,medium
+B079,Acheteur fictif 079,Marrakech-Safi,high
+B080,Acheteur fictif 080,Marrakech-Safi,low

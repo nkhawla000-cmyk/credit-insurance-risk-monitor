@@ -1,0 +1,141 @@
+﻿limit_id,policyholder_id,buyer_id,sector,region,risk_band,status,credit_limit_mad
+L0001,H006,B028,Automobile,Marrakech-Safi,high,active,200000
+L0002,H003,B004,Commerce,Fes-Meknes,medium,active,320000
+L0003,H002,B059,Textile,Marrakech-Safi,low,active,750000
+L0004,H008,B041,Commerce,Fes-Meknes,medium,active,80000
+L0005,H004,B074,Commerce,Tanger-Tetouan-Al Hoceima,medium,active,200000
+L0006,H007,B040,Agroalimentaire,Marrakech-Safi,low,active,500000
+L0007,H006,B022,Automobile,Fes-Meknes,high,active,750000
+L0008,H005,B080,Services,Marrakech-Safi,low,active,750000
+L0009,H002,B073,Textile,Tanger-Tetouan-Al Hoceima,low,active,500000
+L0010,H007,B053,Agroalimentaire,Fes-Meknes,high,active,200000
+L0011,H003,B042,Commerce,Tanger-Tetouan-Al Hoceima,medium,active,200000
+L0012,H005,B066,Services,Casablanca-Settat,low,active,750000
+L0013,H001,B015,Automobile,Casablanca-Settat,medium,active,80000
+L0014,H002,B029,Textile,Fes-Meknes,medium,active,200000
+L0015,H005,B079,Services,Marrakech-Safi,high,active,80000
+L0016,H001,B076,Automobile,Fes-Meknes,medium,active,320000
+L0017,H001,B053,Automobile,Fes-Meknes,high,active,80000
+L0018,H005,B036,Services,Rabat-Sale-Kenitra,high,active,200000
+L0019,H005,B042,Services,Tanger-Tetouan-Al Hoceima,medium,active,80000
+L0020,H001,B027,Automobile,Tanger-Tetouan-Al Hoceima,high,active,80000
+L0021,H008,B061,Commerce,Souss-Massa,low,active,80000
+L0022,H007,B043,Agroalimentaire,Souss-Massa,medium,active,120000
+L0023,H007,B008,Agroalimentaire,Casablanca-Settat,low,active,500000
+L0024,H005,B016,Services,Tanger-Tetouan-Al Hoceima,low,active,750000
+L0025,H004,B071,Commerce,Marrakech-Safi,high,active,320000
+L0026,H006,B061,Automobile,Souss-Massa,low,active,200000
+L0027,H005,B014,Services,Casablanca-Settat,medium,active,320000
+L0028,H002,B045,Textile,Fes-Meknes,low,active,320000
+L0029,H007,B030,Agroalimentaire,Casablanca-Settat,medium,active,120000
+L0030,H006,B078,Automobile,Fes-Meknes,medium,active,80000
+L0031,H008,B026,Commerce,Fes-Meknes,high,active,500000
+L0032,H003,B015,Commerce,Casablanca-Settat,medium,active,320000
+L0033,H002,B078,Textile,Fes-Meknes,medium,active,120000
+L0034,H008,B046,Commerce,Tanger-Tetouan-Al Hoceima,high,active,80000
+L0035,H008,B071,Commerce,Marrakech-Safi,high,active,320000
+L0036,H003,B052,Commerce,Fes-Meknes,low,active,200000
+L0037,H006,B045,Automobile,Fes-Meknes,low,active,750000
+L0038,H005,B025,Services,Marrakech-Safi,high,active,120000
+L0039,H006,B070,Automobile,Marrakech-Safi,low,active,750000
+L0040,H003,B079,Commerce,Marrakech-Safi,high,active,500000
+L0041,H001,B072,Automobile,Souss-Massa,medium,active,200000
+L0042,H008,B001,Commerce,Marrakech-Safi,medium,active,750000
+L0043,H006,B009,Automobile,Souss-Massa,low,active,750000
+L0044,H001,B035,Automobile,Rabat-Sale-Kenitra,low,active,750000
+L0045,H003,B041,Commerce,Fes-Meknes,medium,suspended,320000
+L0046,H003,B018,Commerce,Souss-Massa,medium,active,120000
+L0047,H001,B047,Automobile,Casablanca-Settat,low,active,120000
+L0048,H007,B078,Agroalimentaire,Fes-Meknes,medium,active,320000
+L0049,H001,B050,Automobile,Fes-Meknes,low,active,200000
+L0050,H006,B063,Automobile,Fes-Meknes,low,suspended,120000
+L0051,H003,B034,Commerce,Marrakech-Safi,low,active,200000
+L0052,H007,B016,Agroalimentaire,Tanger-Tetouan-Al Hoceima,low,active,120000
+L0053,H001,B021,Automobile,Fes-Meknes,low,active,320000
+L0054,H002,B053,Textile,Fes-Meknes,high,active,500000
+L0055,H007,B063,Agroalimentaire,Fes-Meknes,low,active,750000
+L0056,H003,B064,Commerce,Rabat-Sale-Kenitra,medium,active,120000
+L0057,H007,B050,Agroalimentaire,Fes-Meknes,low,active,320000
+L0058,H002,B062,Textile,Casablanca-Settat,medium,active,80000
+L0059,H003,B005,Commerce,Marrakech-Safi,low,suspended,500000
+L0060,H003,B031,Commerce,Rabat-Sale-Kenitra,high,active,80000
+L0061,H008,B073,Commerce,Tanger-Tetouan-Al Hoceima,low,active,80000
+L0062,H004,B040,Commerce,Marrakech-Safi,low,active,500000
+L0063,H006,B036,Automobile,Rabat-Sale-Kenitra,high,active,120000
+L0064,H007,B066,Agroalimentaire,Casablanca-Settat,low,active,80000
+L0065,H006,B025,Automobile,Marrakech-Safi,high,suspended,80000
+L0066,H002,B001,Textile,Marrakech-Safi,medium,active,750000
+L0067,H005,B073,Services,Tanger-Tetouan-Al Hoceima,low,active,500000
+L0068,H004,B073,Commerce,Tanger-Tetouan-Al Hoceima,low,active,320000
+L0069,H003,B032,Commerce,Souss-Massa,medium,active,500000
+L0070,H005,B033,Services,Souss-Massa,low,active,750000
+L0071,H003,B019,Commerce,Tanger-Tetouan-Al Hoceima,low,active,500000
+L0072,H004,B030,Commerce,Casablanca-Settat,medium,active,120000
+L0073,H006,B076,Automobile,Fes-Meknes,medium,active,200000
+L0074,H008,B052,Commerce,Fes-Meknes,low,active,200000
+L0075,H006,B026,Automobile,Fes-Meknes,high,active,500000
+L0076,H004,B055,Commerce,Casablanca-Settat,high,active,120000
+L0077,H006,B079,Automobile,Marrakech-Safi,high,active,200000
+L0078,H003,B022,Commerce,Fes-Meknes,high,active,200000
+L0079,H008,B054,Commerce,Marrakech-Safi,medium,active,320000
+L0080,H007,B052,Agroalimentaire,Fes-Meknes,low,active,750000
+L0081,H007,B014,Agroalimentaire,Casablanca-Settat,medium,active,500000
+L0082,H006,B056,Automobile,Tanger-Tetouan-Al Hoceima,low,active,320000
+L0083,H002,B043,Textile,Souss-Massa,medium,active,500000
+L0084,H007,B060,Agroalimentaire,Rabat-Sale-Kenitra,high,active,500000
+L0085,H007,B058,Agroalimentaire,Souss-Massa,medium,active,200000
+L0086,H004,B041,Commerce,Fes-Meknes,medium,active,120000
+L0087,H002,B017,Textile,Rabat-Sale-Kenitra,high,active,80000
+L0088,H003,B060,Commerce,Rabat-Sale-Kenitra,high,active,750000
+L0089,H003,B077,Commerce,Rabat-Sale-Kenitra,medium,active,80000
+L0090,H001,B006,Automobile,Casablanca-Settat,medium,active,80000
+L0091,H002,B016,Textile,Tanger-Tetouan-Al Hoceima,low,active,120000
+L0092,H006,B066,Automobile,Casablanca-Settat,low,active,500000
+L0093,H005,B019,Services,Tanger-Tetouan-Al Hoceima,low,active,120000
+L0094,H006,B018,Automobile,Souss-Massa,medium,active,200000
+L0095,H003,B027,Commerce,Tanger-Tetouan-Al Hoceima,high,active,750000
+L0096,H001,B028,Automobile,Marrakech-Safi,high,active,200000
+L0097,H005,B041,Services,Fes-Meknes,medium,active,750000
+L0098,H003,B001,Commerce,Marrakech-Safi,medium,active,320000
+L0099,H007,B064,Agroalimentaire,Rabat-Sale-Kenitra,medium,active,80000
+L0100,H003,B062,Commerce,Casablanca-Settat,medium,active,120000
+L0101,H002,B033,Textile,Souss-Massa,low,active,750000
+L0102,H004,B048,Commerce,Souss-Massa,high,active,500000
+L0103,H007,B073,Agroalimentaire,Tanger-Tetouan-Al Hoceima,low,active,80000
+L0104,H004,B062,Commerce,Casablanca-Settat,medium,active,80000
+L0105,H004,B035,Commerce,Rabat-Sale-Kenitra,low,active,200000
+L0106,H002,B056,Textile,Tanger-Tetouan-Al Hoceima,low,active,750000
+L0107,H002,B024,Textile,Casablanca-Settat,low,active,200000
+L0108,H004,B031,Commerce,Rabat-Sale-Kenitra,high,active,500000
+L0109,H002,B019,Textile,Tanger-Tetouan-Al Hoceima,low,active,750000
+L0110,H006,B047,Automobile,Casablanca-Settat,low,active,320000
+L0111,H003,B016,Commerce,Tanger-Tetouan-Al Hoceima,low,active,120000
+L0112,H008,B067,Commerce,Fes-Meknes,medium,active,320000
+L0113,H001,B062,Automobile,Casablanca-Settat,medium,active,750000
+L0114,H005,B045,Services,Fes-Meknes,low,active,200000
+L0115,H003,B030,Commerce,Casablanca-Settat,medium,active,500000
+L0116,H007,B049,Agroalimentaire,Fes-Meknes,high,active,120000
+L0117,H007,B039,Agroalimentaire,Souss-Massa,high,active,500000
+L0118,H005,B002,Services,Marrakech-Safi,medium,active,120000
+L0119,H004,B044,Commerce,Fes-Meknes,high,active,200000
+L0120,H001,B066,Automobile,Casablanca-Settat,low,active,200000
+L0121,H004,B059,Commerce,Marrakech-Safi,low,active,320000
+L0122,H005,B003,Services,Souss-Massa,medium,active,500000
+L0123,H003,B006,Commerce,Casablanca-Settat,medium,active,120000
+L0124,H004,B028,Commerce,Marrakech-Safi,high,active,120000
+L0125,H004,B023,Commerce,Marrakech-Safi,low,active,80000
+L0126,H001,B065,Automobile,Fes-Meknes,low,active,500000
+L0127,H008,B068,Commerce,Casablanca-Settat,medium,active,320000
+L0128,H008,B074,Commerce,Tanger-Tetouan-Al Hoceima,medium,active,500000
+L0129,H004,B024,Commerce,Casablanca-Settat,low,active,750000
+L0130,H003,B053,Commerce,Fes-Meknes,high,active,80000
+L0131,H007,B015,Agroalimentaire,Casablanca-Settat,medium,active,320000
+L0132,H001,B008,Automobile,Casablanca-Settat,low,active,750000
+L0133,H001,B030,Automobile,Casablanca-Settat,medium,suspended,750000
+L0134,H008,B032,Commerce,Souss-Massa,medium,active,500000
+L0135,H002,B041,Textile,Fes-Meknes,medium,active,200000
+L0136,H001,B012,Automobile,Tanger-Tetouan-Al Hoceima,high,active,80000
+L0137,H002,B079,Textile,Marrakech-Safi,high,active,750000
+L0138,H001,B063,Automobile,Fes-Meknes,low,active,200000
+L0139,H001,B049,Automobile,Fes-Meknes,high,active,200000
+L0140,H005,B032,Services,Souss-Massa,medium,active,500000

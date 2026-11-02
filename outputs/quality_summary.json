@@ -1,0 +1,8 @@
+{
+  "policyholders": 8,
+  "buyers": 80,
+  "credit_limits": 140,
+  "invoices": 840,
+  "payments": 1120,
+  "rejected_rows": 4
+}

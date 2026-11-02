@@ -1,0 +1,120 @@
+﻿limit_id,buyer_id,priority,score,outstanding_mad,over_limit_mad,overdue_30_plus_mad,signals
+L0065,B025,critical,12,112625,32625,74750,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Limite suspendue | Profil simulé élevé
+L0017,B053,critical,10,331875,251875,164375,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0119,B044,critical,10,263500,63500,226500,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0038,B025,critical,10,263250,143250,166500,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0018,B036,critical,10,244000,44000,186000,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0060,B031,critical,10,228750,148750,228750,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0078,B022,critical,10,225750,25750,225750,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0076,B055,critical,10,211000,91000,184000,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0087,B017,critical,10,205500,125500,124500,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0116,B049,critical,10,203250,83250,96250,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0034,B046,critical,10,194250,114250,194250,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0136,B012,critical,10,194000,114000,184500,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0020,B027,critical,10,189875,109875,189875,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0063,B036,critical,10,161625,41625,161625,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0015,B079,critical,10,161125,81125,124125,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0124,B028,critical,10,125500,5500,92500,Limite dépassée | Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0073,B076,critical,9,238000,38000,190000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0047,B047,critical,9,225000,105000,155000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0094,B018,critical,9,220625,20625,213625,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0114,B045,critical,9,220000,20000,143500,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0058,B062,critical,9,214250,134250,87250,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0046,B018,critical,9,212500,92500,112000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0072,B030,critical,9,203750,83750,155250,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0056,B064,critical,9,202500,82500,164500,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0086,B041,critical,9,195750,75750,188250,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0104,B062,critical,9,192250,112250,93750,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0100,B062,critical,9,184000,64000,158250,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0103,B073,critical,9,180250,100250,180250,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0033,B078,critical,9,175500,55500,158000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0004,B041,critical,9,169250,89250,129750,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0090,B006,critical,9,168000,88000,168000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0013,B015,critical,9,156625,76625,134125,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0064,B066,critical,9,155375,75375,96000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0123,B006,critical,9,147000,27000,98000,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0118,B002,critical,9,142500,22500,142500,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0022,B043,critical,9,122750,2750,122750,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0052,B016,critical,9,122000,2000,60500,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0111,B016,critical,9,120750,750,70750,Limite dépassée | Créances > 90 jours | Retards > 30 jours
+L0045,B041,critical,7,242000,0,116000,Créances > 90 jours | Retards > 30 jours | Limite suspendue
+L0133,B030,critical,7,217125,0,119250,Créances > 90 jours | Retards > 30 jours | Limite suspendue
+L0029,B030,critical,7,159750,39750,55250,Limite dépassée | Créances > 90 jours
+L0075,B026,high,6,371000,0,234500,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0007,B022,high,6,297250,0,218000,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0088,B060,high,6,277500,0,227000,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0025,B071,high,6,252500,0,223500,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0102,B048,high,6,230750,0,166750,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0095,B027,high,6,218750,0,218750,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0125,B023,high,6,214750,134750,95250,Limite dépassée | Retards > 30 jours
+L0108,B031,high,6,209500,0,171500,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0084,B060,high,6,192250,0,192250,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0139,B049,high,6,191125,0,173125,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0031,B026,high,6,189750,0,126250,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0001,B028,high,6,185750,0,119250,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0040,B079,high,6,184250,0,184250,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0077,B079,high,6,180625,0,180625,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0117,B039,high,6,165625,0,80750,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0137,B079,high,6,161750,0,101250,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0035,B071,high,6,143750,0,98750,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0010,B053,high,6,134000,0,115000,Créances > 90 jours | Retards > 30 jours | Profil simulé élevé
+L0030,B078,high,6,127250,47250,64250,Limite dépassée | Retards > 30 jours
+L0019,B042,high,6,81750,1750,51250,Limite dépassée | Retards > 30 jours
+L0066,B001,high,5,299000,0,143000,Créances > 90 jours | Retards > 30 jours
+L0057,B050,high,5,279500,0,165000,Créances > 90 jours | Retards > 30 jours
+L0042,B001,high,5,256625,0,181125,Créances > 90 jours | Retards > 30 jours
+L0126,B065,high,5,234000,0,131000,Créances > 90 jours | Retards > 30 jours
+L0122,B003,high,5,226250,0,150750,Créances > 90 jours | Retards > 30 jours
+L0112,B067,high,5,219500,0,219500,Créances > 90 jours | Retards > 30 jours
+L0081,B014,high,5,200750,0,200750,Créances > 90 jours | Retards > 30 jours
+L0071,B019,high,5,197750,0,155750,Créances > 90 jours | Retards > 30 jours
+L0128,B074,high,5,192000,0,121500,Créances > 90 jours | Retards > 30 jours
+L0138,B063,high,5,189250,0,153750,Créances > 90 jours | Retards > 30 jours
+L0074,B052,high,5,177250,0,125750,Créances > 90 jours | Retards > 30 jours
+L0085,B058,high,5,173250,0,142250,Créances > 90 jours | Retards > 30 jours
+L0121,B059,high,5,171250,0,171250,Créances > 90 jours | Retards > 30 jours
+L0132,B008,high,5,165000,0,165000,Créances > 90 jours | Retards > 30 jours
+L0016,B076,high,5,162250,0,103500,Créances > 90 jours | Retards > 30 jours
+L0011,B042,high,5,150500,0,150500,Créances > 90 jours | Retards > 30 jours
+L0036,B052,high,5,146500,0,146500,Créances > 90 jours | Retards > 30 jours
+L0053,B021,high,5,143750,0,66250,Créances > 90 jours | Retards > 30 jours
+L0026,B061,high,5,137250,0,137250,Créances > 90 jours | Retards > 30 jours
+L0080,B052,high,5,129750,0,92000,Créances > 90 jours | Retards > 30 jours
+L0105,B035,high,5,119250,0,106500,Créances > 90 jours | Retards > 30 jours
+L0083,B043,high,5,116250,0,82750,Créances > 90 jours | Retards > 30 jours
+L0012,B066,high,5,114750,0,102750,Créances > 90 jours | Retards > 30 jours
+L0093,B019,high,5,114000,0,61250,Créances > 90 jours | Retards > 30 jours
+L0130,B053,high,5,114000,34000,17000,Limite dépassée | Profil simulé élevé
+L0092,B066,high,5,111000,0,57500,Créances > 90 jours | Retards > 30 jours
+L0082,B056,high,5,110500,0,110500,Créances > 90 jours | Retards > 30 jours
+L0115,B030,high,5,106000,0,106000,Créances > 90 jours | Retards > 30 jours
+L0127,B068,high,5,105125,0,91250,Créances > 90 jours | Retards > 30 jours
+L0131,B015,high,5,101500,0,69000,Créances > 90 jours | Retards > 30 jours
+L0079,B054,high,5,101250,0,101250,Créances > 90 jours | Retards > 30 jours
+L0069,B032,high,5,101000,0,79250,Créances > 90 jours | Retards > 30 jours
+L0106,B056,high,5,91500,0,75000,Créances > 90 jours | Retards > 30 jours
+L0107,B024,high,5,88500,0,88500,Créances > 90 jours | Retards > 30 jours
+L0091,B016,high,5,88125,0,88125,Créances > 90 jours | Retards > 30 jours
+L0113,B062,high,5,85750,0,85750,Créances > 90 jours | Retards > 30 jours
+L0021,B061,high,4,224375,144375,83000,Limite dépassée
+L0089,B077,high,4,178000,98000,39500,Limite dépassée
+L0099,B064,high,4,162000,82000,58000,Limite dépassée
+L0054,B053,watch,3,256000,0,140500,Retards > 30 jours | Profil simulé élevé
+L0098,B001,watch,3,162250,0,41750,Créances > 90 jours
+L0096,B028,watch,3,149250,0,68250,Retards > 30 jours | Profil simulé élevé
+L0005,B074,watch,3,131000,0,41500,Créances > 90 jours
+L0041,B072,watch,3,96000,0,44000,Créances > 90 jours
+L0120,B066,watch,3,85750,0,46750,Créances > 90 jours
+L0008,B080,watch,3,28000,0,28000,Créances > 90 jours
+L0097,B041,watch,2,349875,0,280500,Retards > 30 jours
+L0134,B032,watch,2,272500,0,180000,Retards > 30 jours
+L0140,B032,watch,2,249000,0,102500,Retards > 30 jours
+L0055,B063,watch,2,200000,0,88500,Retards > 30 jours
+L0037,B045,watch,2,145500,0,139500,Retards > 30 jours
+L0110,B047,watch,2,130750,0,71250,Retards > 30 jours
+L0101,B033,watch,2,127250,0,52250,Retards > 30 jours
+L0062,B040,watch,2,123250,0,100000,Retards > 30 jours
+L0048,B078,watch,2,122000,0,57000,Retards > 30 jours
+L0059,B005,watch,2,72750,0,15000,Limite suspendue
+L0043,B009,watch,2,55000,0,55000,Retards > 30 jours
+L0050,B063,watch,2,47000,0,47000,Limite suspendue

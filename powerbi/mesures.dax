@@ -1,0 +1,15 @@
+-- Mesures pour la table unique portfolio_flat, pratique dans Power BI web (Mac).
+-- Importer powerbi/datasets/portfolio_flat.csv et nommer la table Portfolio.
+-- DAX = à copier individuellement dans le modèle si l'interface permet de créer des mesures.
+Encours Total MAD = SUM(Portfolio[outstanding_mad])
+Limites Approuvees MAD = SUM(Portfolio[credit_limit_mad])
+Encours en Retard MAD = SUM(Portfolio[overdue_mad])
+Retard Superieur 30j MAD = SUM(Portfolio[overdue_30_plus_mad])
+Depassement MAD = SUM(Portfolio[over_limit_mad])
+Utilisation Globale = DIVIDE([Encours Total MAD], [Limites Approuvees MAD], 0)
+Part en Retard = DIVIDE([Encours en Retard MAD], [Encours Total MAD], 0)
+Nombre Limites = DISTINCTCOUNT(Portfolio[limit_id])
+Nombre Acheteurs = DISTINCTCOUNT(Portfolio[buyer_id])
+Nombre Limites Depassees = COUNTROWS(FILTER(Portfolio, Portfolio[over_limit_mad] > 0))
+-- Attention: pas de SOMME de utilization_pct ; taux = rapport des deux SOMMES.
+-- FactScenarios contient 30 variantes répétées : filtrer à une seule variante avant toute somme.

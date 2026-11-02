@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-10-31",
+  "currency": "MAD",
+  "dim_limits": 140,
+  "fact_exposure": 140,
+  "fact_invoices": 840,
+  "fact_alerts": 119,
+  "scenario_summary": 30,
+  "fact_scenarios": 4200,
+  "reconciled_outstanding_mad": 22867875,
+  "reconciled_over_limit_mad": 3426375,
+  "all_data_synthetic": true
+}

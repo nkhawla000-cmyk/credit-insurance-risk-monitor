@@ -1,0 +1,22 @@
+name: Python tests and BI reconciliation
+on:
+  push:
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate synthetic dataset
+        run: |
+          python -m src.generate
+          python run.py --as-of 2026-10-31
+      - name: Build BI extracts and dashboard
+        run: |
+          python export_powerbi.py
+          python build_dashboard.py
+      - name: Validate
+        run: python -m unittest discover -s tests -v
