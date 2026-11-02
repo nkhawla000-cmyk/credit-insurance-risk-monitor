@@ -1,4 +1,4 @@
-"""Stage 2: build a self-contained, offline, interactive portfolio dashboard.
+"""Build a self-contained, offline, interactive portfolio dashboard.
 
 Usage:
     python3 run.py --as-of 2026-10-31

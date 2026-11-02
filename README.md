@@ -1,28 +1,33 @@
 # Credit Insurance Risk Monitor
 
-**Trade Credit Insurance • Explainable Early Warning • Portfolio Analytics • Stress Testing**
+**Trade Credit Insurance · Portfolio Analytics · Explainable Early Warning · Scenario-Based Sensitivity Analysis**
 
-![Project overview](assets/overview.png)
+![Executive overview of the dashboard](assets/overview.png)
 
-> **100% synthetic Moroccan-style B2B data.** Academic portfolio project: no real client records, no validated credit scoring, no automated underwriting or insurance decision.
-
+> **Academic portfolio project — 100% synthetic B2B data.** All buyer IDs, payments, invoices and credit limits are simulated. Results are not estimates of the Moroccan market, and no real underwriting or insurance decisions are automated.
 
 ### Try the interactive demo
 
-🚀 [Explore the Live Interactive Dashboard](https://nkhawla000-cmyk.github.io/credit-insurance-risk-monitor/) Explore three interactive modules to monitor credit insurance exposures, identify explainable warning signals, and simulate stress scenarios using synthetic data.
+🚀 **[Explore the Live Interactive Dashboard](https://nkhawla000-cmyk.github.io/credit-insurance-risk-monitor/)**
 
-The dashboard operates **offline**, with all scenario data prepared in Python. It has three sections:
-| Portfolio overview | Explainable alerts | Stress scenario laboratory |
+The browser-based dashboard has three interactive modules. No sign-in or Python installation is required to try the published demonstration.
+
+| Executive Risk Overview | Explainable Early Warning | Scenario & Sensitivity Analysis |
 |---|---|---|
-| ![Overview](assets/overview.png) | ![Alerts](assets/early_warning.png) | ![Stress lab](assets/stress_scenarios.png) |
+| ![Portfolio overview](assets/overview.png) | ![Risk alerts](assets/early_warning.png) | ![Scenario analysis](assets/stress_scenarios.png) |
 
-### Business value
+### Business problem and solution
 
-Trade credit insurance monitors **insured suppliers** and their **buyer debtors**. This demonstrator identifies exposed buyers, overdue receivables, credit-limit breaches and explainable warning signals, then simulates what-if changes under transparent rules.
+In trade credit insurance, the insured supplier and the buyer/debtor are distinct parties. Monitoring can involve outstanding receivables, overdue invoices, buyer concentration, credit limits and exceptions requiring manual review.
 
-**Why it is more than a dashboard:** dated payment events make historical exposure calculations reproducible; data-quality controls quarantine invalid records; the buyer and insured-supplier roles are modeled separately; priority scores have readable rule-based explanations; scenario impacts are computed in Python, not fabricated or inferred.
+This educational prototype connects those signals through a reproducible data pipeline and a decision-support dashboard:
 
-### Verified demonstration snapshot — 31 October 2026
+- **Portfolio monitoring:** receivables, aging buckets, sector exposures, limit utilization and buyer concentration.
+- **Explainable alerts:** rule-based priorities with human-readable reasons and suggested verification steps.
+- **Sensitivity analysis:** 30 hypothetical combinations of delayed invoice aging and reduced simulated limits, with before/after comparisons and no changes to the underlying cash events.
+- **Data quality:** import checks and quarantining of invalid records; as-of calculations based on dated payments.
+
+### Reproducible demonstration snapshot — 31 October 2026
 
 | Metric | Synthetic result |
 |---|---:|
@@ -33,21 +38,32 @@ Trade credit insurance monitors **insured suppliers** and their **buyer debtors*
 | Outstanding receivables | 22.87 million MAD |
 | Overdue receivables | 18.26 million MAD |
 | Credit-limit excess | 3.43 million MAD |
-| Synthetic-data quality rejections | 4 |
+| Flagged credit-limit relationships | 119 / 140 |
+| Import-quality rejections | 4 |
 
-The high overdue share reflects a **deliberately stressed synthetic demonstration scenario**, not a market statistic.
+**Interpretation:** this dataset intentionally represents a highly stressed portfolio: about 80% of outstanding receivables are overdue and 119/140 limit relationships trigger rule-based alerts. It is **not a representative real-world portfolio**, and the alert rate is not a default rate.
 
 ### Architecture
 
 ```text
-synthetic CSVs ──> Python ETL + quality checks ──> SQLite + as-of snapshots
-                                                     ├──> KPI & alerts (Python)
-                                                     ├──> stress grid (30 scenarios)
-                                                     ├──> offline HTML dashboard
-                                                     └──> Power BI CSV export + DAX guide
+Synthetic CSV files
+        |
+        v
+Python ETL + data-quality validation --> quarantined records
+        |
+        v
+SQLite + dated payment events --> as-of invoice / limit snapshots
+        |
+        +--> Portfolio KPIs and aging analytics
+        +--> Explainable rule-based alerts
+        +--> 30 precomputed sensitivity scenarios
+        +--> Offline interactive HTML dashboard (GitHub Pages)
+        +--> CSV exports and example DAX measures for Power BI
 ```
 
-### Reproduce locally (Python 3.10+, **standard library only**)
+### Run locally
+
+Requires **Python 3.10+**, using only the standard library.
 
 ```bash
 python3 -m src.generate
@@ -55,36 +71,35 @@ python3 run.py --as-of 2026-10-31
 python3 export_powerbi.py
 python3 build_dashboard.py
 python3 -m unittest discover -s tests -v
-open dashboard/index.html           # macOS, or double-click dashboard/index.html
+open dashboard/index.html  # macOS
 ```
 
-**Power BI:** `powerbi/datasets/portfolio_flat.csv` is a convenient 140-row one-table dataset suitable for browser-based Power BI. Reconciled dimensional/fact datasets, scenario tables and example DAX measures are also supplied. **No .pbix file is claimed.** See [Power BI setup](docs/POWER_BI_FR.md).
+The test suite covers import consistency, historical payment logic, portfolio reconciliation, alerts, dashboard data and sensitivity scenarios. At the verified release, **41 automated tests pass**.
 
-### Repository layout
+### Files and documentation
 
-- `src/generate.py`, `src/etl.py`, `src/metrics.py`: synthetic data and dated exposure calculations.
-- `src/alerts.py`: human-readable alert rules and priority.
-- `src/stress.py`: 30 what-if scenarios, 5 aging shifts × 6 limit reductions.
-- `src/bi_export.py`: reusable BI CSV exports with reconciliation checks.
-- `dashboard/`: responsive, self-contained dashboard. Public demo can be hosted on GitHub Pages.
-- `tests/`: quality, reconciliation, business logic, dashboard and scenario tests.
-- `assets/`: verified screenshots of simulated interactive views.
-- `docs/`: modeling notes and step-by-step French guides.
+- `src/` — synthetic dataset generation, ETL, calculations, alert rules, scenarios and BI exports.
+- `data/` — synthetic input CSV files.
+- `outputs/` — reproducible, generated snapshots (SQLite database is not committed).
+- `dashboard/` — source template and a generated, standalone HTML demo.
+- `tests/` — Python unittest suite.
+- `assets/` — screenshots of dashboard views.
+- `powerbi/datasets/` — CSV exports for BI reporting; `powerbi/mesures.dax` contains example measures.
+- [Methodology, assumptions and limitations](docs/METHODOLOGY.md) — definitions and interpretation of the simulated results.
+- [Technical architecture](docs/ARCHITECTURE.md) — component and data flow.
+- [Power BI setup guide](docs/POWER_BI_FR.md) — guidance for Mac and Windows.
 
-### Interpret with care
+**Power BI status:** CSV exports and DAX examples are provided; no `.pbix` file or published Power BI report is claimed.
 
-- Every company ID, invoice and payment is fake. The model is educational.
-- Risk bands are simulated labels and the priority index is an **explainable heuristic**, *not* a PD estimate or bank credit score.
-- The scenario model shifts invoice ages and changes limits, not contract terms, cash flow or default probability.
-- Approved-limit totals should **not** be interpreted as insured coverage, indemnities or claims.
-- Current limitation: limit values and suspension statuses do not have their own historical event log.
+### Scope and limitations
 
-### Guides
-
-[Business & technical architecture](docs/ARCHITECTURE.md) · [BI / Power BI on Mac](docs/POWER_BI_FR.md) · [GitHub publishing (FR)](docs/GITHUB_PUBLICATION_FR.md) · [Stage 4 assumptions](docs/ETAPE_4_FR.md)
+- The priority indicator is a transparent **heuristic**, not a calibrated probability of default, a validated credit score or an underwriting decision.
+- The what-if module measures **sensitivity of overdue exposure, limit excess and rule-based alerts**. It does not estimate claims, losses, PD, LGD or expected loss.
+- Hypothetical aging shifts are not legal changes to invoice due dates; reduced limits are not changes to live insurance coverage.
+- Credit-limit values and suspension statuses are not stored as historical events in the current version.
 
 ### Technology
 
-`Python` · `SQLite` · `SQL` · `HTML` · `CSS` · `JavaScript` · `DAX (prepared)` · `unittest` · `GitHub Actions`
+`Python` · `SQLite` · `SQL` · `HTML / CSS / JavaScript` · `unittest` · `GitHub Actions` · `Power BI-ready CSVs` · `DAX examples`
 
-**License:** to be decided before third-party redistribution. Public viewing does not imply open-source licensing.
+**License:** not yet selected. Publicly viewable source code does not automatically grant a third-party reuse license.

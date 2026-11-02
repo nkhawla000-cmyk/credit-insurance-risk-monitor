@@ -34,7 +34,7 @@
     @media(max-width:1150px){.warning-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:760px){.warning-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-    /* Stage 4: deterministic what-if laboratory */
+    /* Deterministic scenario-based sensitivity analysis */
     .stress-intro{margin:23px 0 18px;color:#b3c4dc;font-size:13px;line-height:1.6;max-width:1060px}
     .stress-controls{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;background:var(--panel);padding:18px;border:1px solid var(--line);border-radius:14px;margin:0 0 19px}
     .stress-controls label{font-size:12px;color:var(--muted);display:block;margin-bottom:8px;font-weight:750}
@@ -59,7 +59,7 @@
   <aside class="aside">
     <div class="brand"><div class="brandmark">CI</div><div class="brandtxt">CREDIT INSURANCE<span>RISK MONITOR</span></div></div>
     <nav class="nav" aria-label="Navigation"><div class="navtag">Workspace</div><a class="navitem on" id="navOverview" href="#overview" title="Executive Overview"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg><span>Executive Overview</span></a><a class="navitem" id="navWarnings" href="#warnings" title="Early Warning Center"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3zM12 9v5m0 3v1"/></svg><span>Early Warning Center</span></a><a class="navitem" id="navStress" href="#stress" title="Stress Scenarios"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19h16M4 5v14m3-5 4-4 3 2 6-7"/></svg><span>Stress Scenarios</span></a></nav>
-    <div class="aside-foot"><span class="status"></span><strong>Offline &amp; ready</strong><p>Données fictives, génération locale, aucune connexion Internet requise.</p>Étape 4 · Stress Scenario Lab</div>
+    <div class="aside-foot"><span class="status"></span><strong>Offline &amp; ready</strong><p>Données fictives, génération locale, aucune connexion Internet requise.</p>Simulation · Données synthétiques</div>
   </aside>
   <main>
     <header class="topbar"><div><div class="eyebrow">Trade Credit Insurance / Portfolio Intelligence</div><h1 class="title" id="pageTitle">Executive Risk Overview</h1><p class="subtitle" id="pageSubtitle">Surveillance des créances, de l'utilisation des limites et de la concentration des expositions.</p></div><div class="topright"><span class="synthetic">SIMULATED DATA</span><div class="snapshot">Arrêté au <strong id="asof"></strong></div></div></header>
@@ -121,7 +121,7 @@
       <section class="stress-two">
         <article class="panel"><h2 class="panel-title">Avant / après le choc</h2><p class="panel-sub">Comparaison des montants, à périmètre constant</p><div id="stressComparison"></div><div class="compare-legend"><span><i></i> Situation initiale</span><span><i class="shock"></i> Scénario hypothétique</span></div></article>
         <article class="panel"><h2 class="panel-title">Interprétation et limites</h2><p class="panel-sub">Des hypothèses transparentes, pas une prévision financière</p>
-          <ul class="rule-list"><li><b>01</b> Encours et paiements restent inchangés.</li><li><b>02</b> Décalage des échéances = plus grande ancienneté des impayés.</li><li><b>03</b> Réduction uniforme des limites = hausse possible des dépassements.</li><li><b>04</b> Les alertes sont recalculées avec les règles de l'étape 3.</li></ul>
+          <ul class="rule-list"><li><b>01</b> Encours et paiements restent inchangés.</li><li><b>02</b> Décalage des échéances = plus grande ancienneté des impayés.</li><li><b>03</b> Réduction uniforme des limites = hausse possible des dépassements.</li><li><b>04</b> Les alertes sont recalculées à partir des mêmes règles métier que le centre de surveillance.</li></ul>
           <div class="stress-method"><strong>Important :</strong> simulation statique construite sur des données fictives. Ce n'est ni un modèle de PD, ni une estimation de sinistres, ni une recommandation de réduction réelle des garanties. L'hypothèse de décalage des échéances est un choc pédagogique, pas une modification contractuelle.</div>
         </article>
       </section>
@@ -130,7 +130,7 @@
         <p class="captionline" id="sCount"></p>
       </section>
     </div>
-        <footer class="footer"><span>Credit Insurance Risk Monitor · Étape 4 · Projet pédagogique</span><span>Python / SQLite → CSV snapshots → Dashboard HTML autonome</span></footer>
+        <footer class="footer"><span>Credit Insurance Risk Monitor · Démonstration pédagogique</span><span>Python / SQLite → CSV snapshots → Dashboard HTML autonome</span></footer>
   </main>
 </div>
 <script>
@@ -174,7 +174,7 @@ $('reset').addEventListener('click',()=>{for(let id of ['sector','region','risk'
 $('export').addEventListener('click',()=>{let arr=[['buyer_id','risk_band','outstanding_mad','overdue_mad','approved_limit_mad'],...currentTop.map(b=>[b.buyer_id,b.risk_band,b.outstanding,b.overdue,b.limit])];let csv='\ufeff'+arr.map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\r\n');let a=document.createElement('a');let u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.href=u;a.download=`top10_buyers_${DATA.meta.as_of}.csv`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000);});
 $('asof').textContent=DATA.meta.as_of.split('-').reverse().join('/');buildFilters();update();
 
-// Stage 3 — explainable monitoring engine. The Python build computes the flags.
+// Explainable monitoring rules and alert engine. The Python build computes the flags.
 const priorityLabel={critical:'Critique',high:'Haute',watch:'Surveillance'};
 const signalLabel={over_limit:'Limite dépassée',aged_90:'Retards > 90 j',late_30:'Retards > 30 j',suspended:'Limite suspendue',risk_profile:'Profil simulé élevé'};
 let visibleAlerts=[];
@@ -237,7 +237,7 @@ $('navWarnings').addEventListener('click',()=>showView('warnings'));
 $('navStress').addEventListener('click',()=>showView('stress'));
 window.addEventListener('hashchange',()=>showView(location.hash==='#stress'?'stress':location.hash==='#warnings'?'warnings':'overview'));
 
-// Stage 4 — Python-precomputed scenario grid; no external calls or mutation.
+// Python-precomputed sensitivity grid; no external calls or mutation.
 let currentStressRows=[];
 function stressInit(){
   $('sSector').add(new Option('Tous les secteurs',''));

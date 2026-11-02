@@ -1,33 +1,29 @@
-# Architecture technique — Stage 1
+# Technical architecture
 
 ```text
-     policyholders.csv            buyers.csv
-              │                       │
-              └───────┬───────────────┘
-                      ▼
-               credit_limits.csv
-                      │
-                      ▼
-                 invoices.csv  ◄── payments.csv (dated cash events)
-                      │
-                      ▼
-           Python import + data quality rules
-                      │                    └──► rejected_rows / anomalies.csv
-                      ▼
-          SQLite (foreign keys, constraints)
-                      │
-                      ▼
-             Historical snapshot at T
-                      │
-           ┌──────────┴──────────┐
-           ▼                     ▼
-  invoices_snapshot.csv   credit_limits_snapshot.csv
-           └──────────┬──────────┘
-                      ▼
-                   kpis.json
-
-Stages 2–4: offline interactive portfolio overview, explainable alert center and Python precomputed stress scenario lab.
-Stage 5: Power BI-ready CSV extracts and GitHub Pages demo.
+policyholders.csv  +  buyers.csv
+           |              |
+           +-- credit_limits.csv --+
+                                     +-- invoices.csv <-- payments.csv (dated)
+                                                  |
+                                    Python ETL and validation
+                                      |                |
+                                      v                v
+                                    SQLite       rejected anomalies
+                                      |
+                           As-of snapshots (2026-10-31)
+                                      |
+                    +-----------------+------------------+
+                    |                 |                  |
+                Portfolio KPIs    Alert rules       Scenario grid
+                    |                 |                  |
+                    +-----------------+------------------+
+                                      |
+                             Dashboard + BI exports
 ```
 
-Amounts are stored as integer Moroccan dirhams (MAD) to avoid float rounding errors in the demo. The project is independent of Power BI for reproducibility. The insured seller (`policyholder`) is *not* the same role as the buyer/debtor (`buyer`).
+- Buyer and insured supplier are distinct entities. A credit-limit relationship binds an insured supplier to a buyer.
+- Dated payments allow invoice outstanding amounts to be recalculated at an as-of date without using future receipts.
+- Monetary amounts are stored in integer Moroccan dirhams in the simulation to avoid float rounding.
+- The HTML demonstration contains precomputed data and works offline. GitHub Pages hosts the generated page.
+- See [methodology](METHODOLOGY.md) for alert thresholds, simulation assumptions and known limitations.

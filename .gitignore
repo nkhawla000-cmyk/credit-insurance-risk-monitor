@@ -4,3 +4,10 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 outputs/*.sqlite3
+
+# Local build walkthroughs / interview preparation (not for public repo)
+docs/STEPS_FR.md
+docs/ETAPE_2_FR.md
+docs/ETAPE_3_FR.md
+docs/ETAPE_4_FR.md
+docs/GITHUB_PUBLICATION_FR.md
