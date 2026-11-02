@@ -1,4 +1,4 @@
-"""Stage 1 - deterministic ingestion and historical portfolio KPIs."""
+"""Deterministic ingestion and historical portfolio KPIs."""
 from __future__ import annotations
 import argparse
 import csv
@@ -41,7 +41,7 @@ def main(as_of: date) -> dict:
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description='Educational trade credit insurance portfolio monitor, stage 1')
+    parser=argparse.ArgumentParser(description='Educational trade credit insurance portfolio monitor')
     parser.add_argument('--as-of',default='2026-10-31',help='YYYY-MM-DD; historical snapshot cutoff')
     args=parser.parse_args()
     print(json.dumps(main(date.fromisoformat(args.as_of)),indent=2,ensure_ascii=False))

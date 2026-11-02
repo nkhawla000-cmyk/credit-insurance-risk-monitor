@@ -1,4 +1,4 @@
-"""Stage 4 regression tests for reproducible static what-if scenarios."""
+"""Regression tests for reproducible static what-if scenarios."""
 import unittest
 from copy import deepcopy
 from build_dashboard import read_csv, prepare_payload

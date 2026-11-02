@@ -58,7 +58,7 @@
 <div class="app">
   <aside class="aside">
     <div class="brand"><div class="brandmark">CI</div><div class="brandtxt">CREDIT INSURANCE<span>RISK MONITOR</span></div></div>
-    <nav class="nav" aria-label="Navigation"><div class="navtag">Workspace</div><a class="navitem on" id="navOverview" href="#overview" title="Executive Overview"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg><span>Executive Overview</span></a><a class="navitem" id="navWarnings" href="#warnings" title="Early Warning Center"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3zM12 9v5m0 3v1"/></svg><span>Early Warning Center</span></a><a class="navitem" id="navStress" href="#stress" title="Stress Scenarios"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19h16M4 5v14m3-5 4-4 3 2 6-7"/></svg><span>Stress Scenarios</span></a></nav>
+    <nav class="nav" aria-label="Navigation"><div class="navtag">Workspace</div><a class="navitem on" id="navOverview" href="#overview" title="Executive Overview"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg><span>Executive Overview</span></a><a class="navitem" id="navWarnings" href="#warnings" title="Early Warning Center"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3zM12 9v5m0 3v1"/></svg><span>Early Warning Center</span></a><a class="navitem" id="navStress" href="#stress" title="Sensitivity Scenarios"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19h16M4 5v14m3-5 4-4 3 2 6-7"/></svg><span>Sensitivity Scenarios</span></a></nav>
     <div class="aside-foot"><span class="status"></span><strong>Offline &amp; ready</strong><p>Données fictives, génération locale, aucune connexion Internet requise.</p>Simulation · Données synthétiques</div>
   </aside>
   <main>
@@ -182,7 +182,7 @@ function showView(section){
   const warnings=section==='warnings',stress=section==='stress';
   $('viewOverview').hidden=warnings||stress;$('viewWarnings').hidden=!warnings;$('viewStress').hidden=!stress;
   $('navOverview').classList.toggle('on',!warnings&&!stress);$('navWarnings').classList.toggle('on',warnings);$('navStress').classList.toggle('on',stress);
-  $('pageTitle').textContent=stress?'Stress Scenario Lab':warnings?'Early Warning Center':'Executive Risk Overview';
+  $('pageTitle').textContent=stress?'Sensitivity Scenario Lab':warnings?'Early Warning Center':'Executive Risk Overview';
   $('pageSubtitle').textContent=stress?'Simuler des chocs sur les échéances et les limites de crédit pour explorer leurs impacts.':warnings?"Détection explicable des signaux d'alerte et priorisation des dossiers à examiner.":"Surveillance des créances, de l'utilisation des limites et de la concentration des expositions.";
   if(warnings) updateWarnings();
   if(stress) updateStress();

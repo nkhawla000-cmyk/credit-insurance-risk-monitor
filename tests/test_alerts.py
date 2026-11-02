@@ -1,4 +1,4 @@
-"""Stage 3: deterministic and explainable alert business rules."""
+"""Deterministic and explainable alert business-rule tests."""
 import unittest
 from pathlib import Path
 import sys

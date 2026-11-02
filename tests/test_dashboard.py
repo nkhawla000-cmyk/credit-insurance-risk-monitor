@@ -1,4 +1,4 @@
-"""Compatibility and consistency tests for the Stage 2 dashboard."""
+"""Compatibility and consistency tests for the portfolio dashboard."""
 import json
 import unittest
 from pathlib import Path

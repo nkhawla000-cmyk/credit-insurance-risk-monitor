@@ -102,4 +102,4 @@ The test suite covers import consistency, historical payment logic, portfolio re
 
 `Python` · `SQLite` · `SQL` · `HTML / CSS / JavaScript` · `unittest` · `GitHub Actions` · `Power BI-ready CSVs` · `DAX examples`
 
-**License:** not yet selected. Publicly viewable source code does not automatically grant a third-party reuse license.
+**License:** [MIT License](LICENSE) — Copyright (c) 2026 Khaoula Nassiri.
