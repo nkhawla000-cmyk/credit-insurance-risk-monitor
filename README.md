@@ -16,6 +16,16 @@ The browser-based dashboard has three interactive modules. No sign-in or Python 
 |---|---|---|
 | ![Portfolio overview](assets/overview.png) | ![Risk alerts](assets/early_warning.png) | ![Scenario analysis](assets/stress_scenarios.png) |
 
+### Power BI Dashboard
+
+An interactive Power BI Desktop report complements the web dashboard with three analytical views: **Portfolio Intelligence**, **Early Warning Center**, and **Sensitivity Lab**.
+
+The report uses synthetic portfolio data and 30 precomputed sensitivity scenarios.
+
+**[Download the Power BI report (.pbix)](powerbi/Credit_Insurance_Risk_Monitor.pbix)**
+
+Requires Power BI Desktop to open and explore the report.
+
 ### Business problem and solution
 
 In trade credit insurance, the insured supplier and the buyer/debtor are distinct parties. Monitoring can involve outstanding receivables, overdue invoices, buyer concentration, credit limits and exceptions requiring manual review.
