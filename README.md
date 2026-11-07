@@ -58,7 +58,7 @@ SQLite + dated payment events --> as-of invoice / limit snapshots
         +--> Explainable rule-based alerts
         +--> 30 precomputed sensitivity scenarios
         +--> Offline interactive HTML dashboard (GitHub Pages)
-        +--> CSV exports and example DAX measures for Power BI
+       +--> CSV exports + DAX measures + Power BI Desktop report
 ```
 
 ### Run locally
@@ -84,12 +84,12 @@ The test suite covers import consistency, historical payment logic, portfolio re
 - `dashboard/` — source template and a generated, standalone HTML demo.
 - `tests/` — Python unittest suite.
 - `assets/` — screenshots of dashboard views.
-- `powerbi/datasets/` — CSV exports for BI reporting; `powerbi/mesures.dax` contains example measures.
+-- `powerbi/` — Power BI Desktop report (`.pbix`), CSV datasets, DAX measures and report documentation.
 - [Methodology, assumptions and limitations](docs/METHODOLOGY.md) — definitions and interpretation of the simulated results.
 - [Technical architecture](docs/ARCHITECTURE.md) — component and data flow.
 - [Power BI setup guide](docs/POWER_BI_FR.md) — guidance for Mac and Windows.
 
-**Power BI status:** CSV exports and DAX examples are provided; no `.pbix` file or published Power BI report is claimed.
+**Power BI report:** A three-page interactive Power BI Desktop report is available, covering portfolio monitoring, explainable early warnings, and sensitivity analysis using fully synthetic data. [Download the Power BI report](powerbi/Credit_Insurance_Risk_Monitor.pbix).
 
 ### Scope and limitations
 
